@@ -2,7 +2,7 @@
 title: "p8105_hw1_yd2739"
 author: "Yuxuan Du"
 date: "2023-09-14"
-output: html_document
+output: github_document
 ---
 
 ```{r}
