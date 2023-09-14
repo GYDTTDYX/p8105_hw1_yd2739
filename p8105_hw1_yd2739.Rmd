@@ -35,3 +35,33 @@ the size of the data is `r observation_num` x `r variable_num`.
 
 the mean temperature is `r mean_temp` degree. 
 
+## Problem 2
+```{r}
+Q2_df = tibble(
+  samp_10_norm = rnorm(10),
+  samp_10_norm_logic = samp_10_norm > 0,
+  samp_char_vec = c('A', 'B', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'),
+  samp_fac_vec = factor(c(-1, -1, 0, 0, 0, 0, 1, 1, 1, -1))
+)
+Q2_df
+```
+
+
+```{r}
+mean(pull(Q2_df, samp_10_norm))
+mean(pull(Q2_df, samp_10_norm_logic))
+mean(pull(Q2_df, samp_char_vec))
+mean(pull(Q2_df, samp_fac_vec))
+```
+
+among the four vector, char vector and factor vector cannot take mean
+
+```{r, warning=FALSE, results = FALSE}
+as.numeric(pull(Q2_df, samp_10_norm_logic))
+as.numeric(pull(Q2_df, samp_char_vec))
+as.numeric(pull(Q2_df, samp_fac_vec))
+```
+It says NAs introduced by coercion when executing char vec, which means it cannot
+be transformed to numeric vector. 
+But for factor vector it seems transformed successfully to numeric vector but still
+cannot calculate the mean
