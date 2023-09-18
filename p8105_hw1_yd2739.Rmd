@@ -61,7 +61,9 @@ as.numeric(pull(Q2_df, samp_10_norm_logic))
 as.numeric(pull(Q2_df, samp_char_vec))
 as.numeric(pull(Q2_df, samp_fac_vec))
 ```
-It says NAs introduced by coercion when executing char vec, which means it cannot
-be transformed to numeric vector. 
-But for factor vector it seems transformed successfully to numeric vector but still
-cannot calculate the mean
+We could calculate the mean and transform to numeric for logic vector.
+But for char vector, it says NAs introduced by coercion when executing, and it 
+cannot be transformed to numeric vector. So it is reasonable that we cannot calculate
+the mean of char vector. 
+But for factor vector, the  transformation to numeric form seems successes. 
+So it is still not sure why we cannot calculate the mean of the factor vector
