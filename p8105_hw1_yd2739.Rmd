@@ -41,7 +41,7 @@ Q2_df = tibble(
   samp_10_norm = rnorm(10),
   samp_10_norm_logic = samp_10_norm > 0,
   samp_char_vec = c('A', 'B', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'),
-  samp_fac_vec = factor(c(-1, -1, 0, 0, 0, 0, 1, 1, 1, -1))
+  samp_fac_vec = factor(c('red', 'red', 'red', 'red', 'red', 'red', 'blue', 'blue', 'yellow', 'yellow'))
 )
 Q2_df
 ```
