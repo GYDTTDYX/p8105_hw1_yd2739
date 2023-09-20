@@ -36,6 +36,8 @@ the size of the data is `r observation_num` x `r variable_num`.
 the mean temperature is `r mean_temp` degree. 
 
 ## Problem 2
+
+#### Creating tibble
 ```{r}
 Q2_df = tibble(
   samp_10_norm = rnorm(10),
@@ -46,6 +48,7 @@ Q2_df = tibble(
 Q2_df
 ```
 
+#### Calculating means
 
 ```{r}
 mean(pull(Q2_df, samp_10_norm))
@@ -56,6 +59,8 @@ mean(pull(Q2_df, samp_fac_vec))
 
 among the four vector, char vector and factor vector cannot take mean
 
+#### Transform to numeric form
+
 ```{r, warning=FALSE, results = FALSE}
 as.numeric(pull(Q2_df, samp_10_norm_logic))
 as.numeric(pull(Q2_df, samp_char_vec))
@@ -63,7 +68,7 @@ as.numeric(pull(Q2_df, samp_fac_vec))
 ```
 We could calculate the mean and transform to numeric for logic vector.
 But for char vector, it says NAs introduced by coercion when executing, and it 
-cannot be transformed to numeric vector. So it is reasonable that we cannot calculate
-the mean of char vector. 
+cannot be transformed to numeric vector. It is reasonable that we cannot calculate
+the mean of char vector since we cannot change it to numeric form. 
 But for factor vector, the  transformation to numeric form seems successes. 
-So it is still not sure why we cannot calculate the mean of the factor vector
+It is still weird why we cannot calculate the mean of the factor vector
