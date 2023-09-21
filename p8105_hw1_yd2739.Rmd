@@ -35,6 +35,11 @@ ggsave(
 
 q1_scatter
 ```
+
+We could observe that in this plot, the temperature shows weak cyclic pattern
+and  temperature's overall trend is increasing. The humidity didn't show any
+trend according to the plot. 
+
 the variables in the dataset are: `r variables`. 
 
 the size of the data is `r observation_num` x `r variable_num`. 
