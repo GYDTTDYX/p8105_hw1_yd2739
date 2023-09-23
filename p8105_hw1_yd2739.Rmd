@@ -43,16 +43,22 @@ trend according to the plot.
 the variables in the dataset are: `r variables`. 
 
 Some of the important pattern in the dataset: the elements in columns
-origin, year, precip, and month does not varies; There are lots on NA in wind_gust.
+`origin`, `year`, `precip`, and `month` does not varies; There are lots on NA in `wind_gust`.
+
+According to the help file, variables `year`, `month`, `day`, and `hour` are time of recording;`temp` and `dewp` are temperature and dewpoint in F; `humid` is the relative humidity; `wind_dir`, `wind_speed`, `wind_gus`t are variable that describe wind; 
+`visib` is the visibility; `pressure` is the sea level pressure; `precip` is 
+precipitation in inches.
 
 the size of the data is `r observation_num` x `r variable_num`. 
 
-the mean temperature is `r mean_temp` degree. 
+the mean temperature is `r mean_temp` F degree. 
 
 ## Problem 2
 
 #### Creating tibble
 ```{r}
+set.seed(1234)
+#create df of four variables, each with size of 10
 Q2_df = tibble(
   samp_10_norm = rnorm(10),
   samp_10_norm_logic = samp_10_norm > 0,
