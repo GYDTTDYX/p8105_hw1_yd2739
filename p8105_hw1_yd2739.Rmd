@@ -42,6 +42,9 @@ trend according to the plot.
 
 the variables in the dataset are: `r variables`. 
 
+Some of the important pattern in the dataset: the elements in columns
+origin, year, precip, and month does not varies; There are lots on NA in wind_gust.
+
 the size of the data is `r observation_num` x `r variable_num`. 
 
 the mean temperature is `r mean_temp` degree. 
